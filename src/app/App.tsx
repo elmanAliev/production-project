@@ -13,11 +13,13 @@ const App = () => {
 
   return (
     <div className={classNames("app", {}, [theme])}>
-      <Navbar />
-      <div className="content-page">
-        <SideBar />
-        <AppRouter />
-      </div>
+      <Suspense fallback="">
+        <Navbar />
+        <div className="content-page">
+          <SideBar />
+          <AppRouter />
+        </div>
+      </Suspense>
     </div>
   );
 };
