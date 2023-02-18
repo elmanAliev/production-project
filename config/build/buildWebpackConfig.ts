@@ -19,7 +19,7 @@ export function buildWebpackConfig(
             path: paths.build,
             clean: true,
         },
-        plugins: buildPlugins(options).filter(Boolean),
+        plugins: buildPlugins(options),
         module: {
             rules: buildLoaders(options),
         },
