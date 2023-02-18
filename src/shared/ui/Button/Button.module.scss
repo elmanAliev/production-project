@@ -19,3 +19,10 @@
     border-radius: 10px;
     background: var(--btn-bg-color);
 }
+
+.outline {
+    padding: 10px 15px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background: none;
+}
