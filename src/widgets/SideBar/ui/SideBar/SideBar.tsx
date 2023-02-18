@@ -25,7 +25,7 @@ const SideBar = ({ className }: SideBarProps) => {
             <Button
                 data-testid="sidebar-toggle"
                 type="button"
-                onClick={onToggle}
+                onClick={}
             >
                 toggle
             </Button>
