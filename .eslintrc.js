@@ -21,6 +21,7 @@ module.exports = {
         'react',
         '@typescript-eslint',
         'i18next',
+        'react-hooks',
     ],
     rules: {
         quotes: [0, "double"],
@@ -44,6 +45,10 @@ module.exports = {
         'linebreak-style': 0,
         'i18next/no-literal-string': "off",
         'max-len': ['error', { ignoreComments: true, code: 100 }],
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'react-hooks/rules-of-hooks': 'warn', // Checks rules of Hooks
+        'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
     },
     globals: {
         __IS_DEV__: true,
