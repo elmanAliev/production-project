@@ -1,0 +1,12 @@
+.Input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--inverted-bg-color);
+    outline: none;
+    width: 100%;
+    color: var(--primary-color);
+
+    &.focus {
+        outline: none;
+    }
+}
