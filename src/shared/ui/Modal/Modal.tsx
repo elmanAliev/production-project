@@ -8,7 +8,7 @@ import cls from './Modal.module.scss';
 interface ModalProps {
   className?: string
   isOpen: boolean;
-  onClose?: () => void
+  onClose?: () => void;
 }
 
 const ANIMATION_DELAY = 300;
