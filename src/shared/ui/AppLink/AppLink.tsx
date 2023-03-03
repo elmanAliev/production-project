@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { Link, LinkProps } from "react-router-dom";
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./AppLink.module.scss";
@@ -33,4 +33,4 @@ const AppLink: FC<AppLinkProps> = (props) => {
     );
 };
 
-export default AppLink;
+export default memo(AppLink);

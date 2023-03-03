@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Text.module.scss';
 
@@ -29,4 +30,4 @@ const Text = (props: TextProps) => {
     );
 };
 
-export default Text;
+export default memo(Text);

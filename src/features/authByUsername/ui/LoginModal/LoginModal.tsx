@@ -11,14 +11,14 @@ interface LoginModalProps {
   onClose: () => void;
 }
 
-const LoginModal = ({ className, isOpen, onClose }: LoginModalProps) => (
+const LoginModal = ({ className, isOpen, onClose: handleClose }: LoginModalProps) => (
     <Modal
         isOpen={isOpen}
-        onClose={onClose}
+        onClose={handleClose}
         className={classNames(cls.LoginModal, {}, [className])}
     >
         <Suspense fallback={<Loader />}>
-            <LoginFormAsync />
+            <LoginFormAsync onSuccess={handleClose} />
         </Suspense>
     </Modal>
 );
