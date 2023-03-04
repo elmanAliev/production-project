@@ -16,13 +16,13 @@ const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {
-    placeHolder: "text",
+    placeholder: "text",
     value: "textvalue",
 };
 
 export const Dark = Template.bind({});
 Dark.args = {
-    placeHolder: "text",
+    placeholder: "text",
     value: "textvalue",
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
