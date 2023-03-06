@@ -26,13 +26,13 @@
     }
   ],
   "profile": {
-    "first": "Иван",
-    "lastname": "Иванов",
-    "age": 22,
+    "first": "Иван1",
+    "lastname": "Иванов2",
+    "age": 23,
     "currency": "RUB",
-    "country": "Russia",
-    "city": "Moscow",
+    "country": "RUS",
+    "city": "Moscow4",
     "username": "admin",
-    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+    "avatar": "https://pbs.twimg.com/media/BrvfPI_IEAEAWQE.jpg"
   }
 }
