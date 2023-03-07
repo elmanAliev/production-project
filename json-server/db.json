@@ -26,9 +26,9 @@
     }
   ],
   "profile": {
-    "first": "Иван1",
+    "first": "Иван",
     "lastname": "Иванов2",
-    "age": 23,
+    "age": 34,
     "currency": "RUB",
     "country": "RUS",
     "city": "Moscow4",
