@@ -18,16 +18,16 @@ const SideBar = ({ className }: SideBarProps) => {
         setCollapsed((prev) => !prev);
     };
 
-    const itemsList = useMemo(() => (
-        SideBarItemList.map((item) => (
+    const itemsList = useMemo(
+        () => SideBarItemList.map((item) => (
             <SideBarItem
                 item={item}
                 collapsed={collapsed}
                 key={item.path}
             />
-        ))
-
-    ), []);
+        )),
+        [collapsed],
+    );
 
     return (
         <div
