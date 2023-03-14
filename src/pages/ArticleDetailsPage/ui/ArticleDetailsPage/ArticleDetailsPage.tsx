@@ -1,10 +1,21 @@
+import { ArticleDetails } from "entities/Article";
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
+import { useParams } from "react-router-dom";
 
 const ArticleDetailsPage = () => {
-    const { t } = useTranslation("profile");
+    const { t } = useTranslation("article-detailse");
+    const { id } = useParams<{id: string}>();
 
-    return <div>{t("Детали")}</div>;
+    if (!id) {
+        return (
+            <div>
+                {t('Статья не найдена')}
+            </div>
+        );
+    }
+
+    return <div><ArticleDetails id={id} /></div>;
 };
 
 export default memo(ArticleDetailsPage);
