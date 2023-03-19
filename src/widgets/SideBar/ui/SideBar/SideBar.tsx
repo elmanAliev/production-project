@@ -3,7 +3,8 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { Button, ButtonSize, ButtonTheme } from "shared/ui/Button/Button";
 import { LangSwitcher } from "shared/ui/LangSwitcher";
 import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
-import { SideBarItemList } from "../../model/items";
+import { useSelector } from "react-redux";
+import { getSidebarItems } from "../../model/selectors/getSidebarItems";
 import cls from "./SideBar.module.scss";
 import SideBarItem from "../SideBarItem/SideBarItem";
 
@@ -13,6 +14,7 @@ interface SideBarProps {
 
 const SideBar = ({ className }: SideBarProps) => {
     const [collapsed, setCollapsed] = useState(false);
+    const SideBarItemList = useSelector(getSidebarItems);
 
     const onToggle = () => {
         setCollapsed((prev) => !prev);
@@ -26,7 +28,7 @@ const SideBar = ({ className }: SideBarProps) => {
                 key={item.path}
             />
         )),
-        [collapsed],
+        [collapsed, SideBarItemList],
     );
 
     return (
