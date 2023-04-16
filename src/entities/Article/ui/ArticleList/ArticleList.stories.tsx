@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { ArticleList } from './ArticleList';
-import { Article, ArticleView } from '../../model/types/article';
+import { Article } from '../../model/types/article';
 
 export default {
     title: 'entities/Article/ArticleList',
@@ -98,14 +98,14 @@ export const LoadingBig = Template.bind({});
 LoadingBig.args = {
     articles: [],
     isLoading: true,
-    view: ArticleView.BIG,
+    view: "BIG",
 };
 
 export const LoadingSmall = Template.bind({});
 LoadingSmall.args = {
     articles: [],
     isLoading: true,
-    view: ArticleView.SMALL,
+    view: "SMALL",
 };
 
 export const ListSmall = Template.bind({});
@@ -117,7 +117,7 @@ ListSmall.args = {
             id: String(index),
         })),
     isLoading: false,
-    view: ArticleView.SMALL,
+    view: "SMALL",
 };
 
 export const ListBig = Template.bind({});
@@ -129,5 +129,5 @@ ListBig.args = {
             id: String(index),
         })),
     isLoading: false,
-    view: ArticleView.BIG,
+    view: "BIG",
 };

@@ -48,7 +48,4 @@ export interface Article {
     blocks: ArticleBlock[],
 }
 
-export enum ArticleView {
-    BIG = "BIG",
-    SMALL = "SMALL"
-}
+export type ArticleView = "BIG" | "SMALL"

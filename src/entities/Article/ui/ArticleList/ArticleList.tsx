@@ -13,7 +13,7 @@ interface ArticleListProps {
     view?: ArticleView;
 }
 
-const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
+const getSkeletons = (view: ArticleView) => new Array(view === "SMALL" ? 9 : 3)
     .fill(0)
     .map((item, index) => (
         <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
@@ -23,7 +23,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
     const {
         className,
         articles,
-        view = ArticleView.BIG,
+        view = "BIG",
         isLoading = true,
     } = props;
     const { t } = useTranslation();

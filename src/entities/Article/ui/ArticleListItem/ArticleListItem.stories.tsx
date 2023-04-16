@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { ArticleListItem } from './ArticleListItem';
-import { Article, ArticleView } from '../../model/types/article';
+import { Article } from '../../model/types/article';
 
 export default {
     title: 'entities/Article/ArticleListItem',
@@ -96,12 +96,12 @@ const article = {
 
 export const Big = Template.bind({});
 Big.args = {
-    view: ArticleView.BIG,
+    view: "BIG",
     article,
 };
 
 export const Small = Template.bind({});
 Small.args = {
-    view: ArticleView.SMALL,
+    view: "SMALL",
     article,
 };
