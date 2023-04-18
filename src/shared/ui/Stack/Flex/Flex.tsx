@@ -1,10 +1,11 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import { ReactNode } from 'react';
 import cls from './Flex.module.scss';
 
 export type FlexJustify = 'start' | 'center' | 'end' | 'between';
 export type FlexAlign = 'start' | 'center' | 'end';
 export type FlexDirection = 'row' | 'column';
+export type FlexGap = '4' | '8' | '16' | '32';
 
 const justifyClasses: Record<FlexJustify, string> = {
     between: cls.justifyBetween,
@@ -24,13 +25,21 @@ const directionClasses: Record<FlexDirection, string> = {
     row: cls.directionRow,
 };
 
-interface FlexProps {
+const gapClasses: Record<FlexGap, string> = {
+    4: cls.gap4,
+    8: cls.gap8,
+    16: cls.gap16,
+    32: cls.gap32,
+};
+
+export interface FlexProps {
   className?: string;
   children: ReactNode;
   justify?: FlexJustify;
   align?: FlexAlign;
   direction?: FlexDirection;
-
+  gap?: FlexGap;
+  max?: boolean;
 }
 
 const Flex = (props: FlexProps) => {
@@ -40,6 +49,8 @@ const Flex = (props: FlexProps) => {
         align = 'center',
         direction = 'row',
         justify = 'start',
+        gap,
+        max,
     } = props;
 
     const classes = [
@@ -47,10 +58,15 @@ const Flex = (props: FlexProps) => {
         justifyClasses[justify],
         alignClasses[align],
         directionClasses[direction],
+        gap && gapClasses[gap],
     ];
 
+    const mods: Mods = {
+        [cls.max]: max,
+    };
+
     return (
-        <div className={classNames(cls.Flex, {}, classes)}>
+        <div className={classNames(cls.Flex, mods, classes)}>
             {children}
         </div>
     );
