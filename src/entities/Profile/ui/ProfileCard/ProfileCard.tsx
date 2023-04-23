@@ -24,7 +24,7 @@ interface ProfileCardProps {
   onChangeAvatar?: (value: string) => void;
   onChangeUsername?: (value: string) => void;
   onChangeCurrency?: (value: Currency) => void;
-  onChangeCoutry?: (value: Country) => void;
+  onChangeCountry?: (value: Country) => void;
 
 }
 
@@ -41,7 +41,7 @@ export const ProfileCard = ({
     onChangeAvatar,
     onChangeUsername,
     onChangeCurrency,
-    onChangeCoutry,
+    onChangeCountry,
 }: ProfileCardProps) => {
     const { t } = useTranslation("profile");
 
@@ -129,7 +129,7 @@ export const ProfileCard = ({
             <CountrySelect
                 className={cls.input}
                 value={data?.country}
-                onChange={onChangeCoutry}
+                onChange={onChangeCountry}
                 readonly={readonly}
             />
         </VStack>
