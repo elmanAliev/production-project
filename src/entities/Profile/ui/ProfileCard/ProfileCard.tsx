@@ -83,6 +83,7 @@ export const ProfileCard = ({
                 placeholder="Ваше имя"
                 onChange={onChangeFirstname}
                 readonly={readonly}
+                data-testid="ProfileCard.firstname"
             />
             <Input
                 className={cls.input}
@@ -90,6 +91,7 @@ export const ProfileCard = ({
                 placeholder="Ваше фамилия"
                 onChange={onChangeLastname}
                 readonly={readonly}
+                data-testid="ProfileCard.lastname"
             />
             <Input
                 className={cls.input}
