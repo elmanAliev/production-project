@@ -11,6 +11,7 @@ import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { ArticleBlock, ArticleBlockType } from 'entities/Article/model/types/article';
+import { VStack } from 'shared/ui/Stack';
 import {
     getArticleDetailsData,
     getArticleDetailsError,
@@ -126,6 +127,10 @@ export const ArticleDetails = memo(({ id, className }: ArticleDetailsProps) => {
     }, [dispatch, id]);
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>{content}</DynamicModuleLoader>
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+            <VStack gap="16" max className={classNames(cls.ArticleDetails, {}, [className])}>
+                {content}
+            </VStack>
+        </DynamicModuleLoader>
     );
 });
