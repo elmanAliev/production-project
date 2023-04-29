@@ -3,7 +3,7 @@ export {
 } from './ui/ArticleDetails/ArticleDetails';
 
 export type {
-    Article, ArticleView, ArticleSortField, ArticleType,
+    Article, ArticleView,
 } from './model/types/article';
 export type { ArticleDetailsSchema } from './model/types/articleDetailsSchema';
 
@@ -13,3 +13,7 @@ export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelecto
 export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
 
 export { getArticleDetailsData } from './model/selectors/articleDetails';
+export {
+    ArticleType,
+    ArticleSortField,
+} from './model/consts/articleConsts';
