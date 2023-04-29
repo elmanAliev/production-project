@@ -1,5 +1,5 @@
 import {
-    FC, MouseEvent, MutableRefObject, useCallback, useEffect, useRef, useState,
+    FC, MouseEvent, MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import Portal from '../Portal/Portal';
@@ -9,13 +9,14 @@ interface ModalProps {
   className?: string
   isOpen: boolean;
   onClose?: () => void;
+  children: ReactNode
 }
 
 const ANIMATION_DELAY = 300;
 
-const Modal: FC<ModalProps> = ({
+const Modal = ({
     className, children, isOpen, onClose,
-}) => {
+}: ModalProps) => {
     const [isClosing, setIsClosing] = useState(false);
     const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
